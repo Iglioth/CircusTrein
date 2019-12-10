@@ -1,0 +1,10 @@
+C:\Users\Lars\source\repos\Circustrein\Circustrein\bin\Debug\Circustrein.exe.config
+C:\Users\Lars\source\repos\Circustrein\Circustrein\bin\Debug\Circustrein.exe
+C:\Users\Lars\source\repos\Circustrein\Circustrein\bin\Debug\Circustrein.pdb
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.csprojAssemblyReference.cache
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.FCircusTrein.resources
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.Properties.Resources.resources
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.csproj.GenerateResource.cache
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.csproj.CoreCompileInputs.cache
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.exe
+C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.pdb

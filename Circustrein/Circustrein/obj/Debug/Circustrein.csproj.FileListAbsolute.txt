@@ -8,3 +8,13 @@ C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.csproj.
 C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.csproj.CoreCompileInputs.cache
 C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.exe
 C:\Users\Lars\source\repos\Circustrein\Circustrein\obj\Debug\Circustrein.pdb
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\bin\Debug\Circustrein.exe.config
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\bin\Debug\Circustrein.exe
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\bin\Debug\Circustrein.pdb
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.csprojAssemblyReference.cache
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.FCircusTrein.resources
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.Properties.Resources.resources
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.csproj.GenerateResource.cache
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.csproj.CoreCompileInputs.cache
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.exe
+D:\Fontys Semester 2\Indiviueel\Git Bestanden\CircusTrein\Circustrein\Circustrein\obj\Debug\Circustrein.pdb

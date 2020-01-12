@@ -1,4 +1,5 @@
-﻿using Circustrein.Models;
+﻿using Circustrein.Context;
+using Circustrein.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace Circustrein
 
         //Properties
         public List<Animal> animals = new List<Animal>();
+        public AlgoritmeContext algoritme = new AlgoritmeContext();
 
         //Constructor
         public FCircusTrein()
@@ -49,7 +51,17 @@ namespace Circustrein
         }
 
 
-        //Algorithm
+        private void BAlgorithm_Click(object sender, EventArgs e)
+        {
+            Train t = PerformAlghoritm(animals);
+            for(int x = 0; x < t.wagons.Count(); x++)
+            {
+                var item = new ListViewItem(new[] { (x + 1).ToString() , t.wagons[x].Animals.Count().ToString(), (10 - t.wagons[x].FreePoints).ToString()});
+                TrainListView.Items.Add(item);
+            }
+            TrainListView.Visible = true;
+        }
+
         public Train PerformAlghoritm(List<Animal> Animals)
         {
             Train train = new Train();
@@ -66,13 +78,13 @@ namespace Circustrein
                         break;
                     }
                     //Check if there is room in the wagon
-                    if (WagonHasRoom(w, a))
+                    if (algoritme.WagonHasRoom(w, a))
                     {
                         //if animal is a herbivore
                         if (a.Eater == AnimalType.Herbivore)
                         {
                             //If there is no other carnivore 
-                            if (!WagonHasMeatEater(w))
+                            if (!algoritme.WagonHasMeatEater(w))
                             {
                                 w.Animals.Add(a);
                                 w.FreePoints -= a.points;
@@ -81,7 +93,7 @@ namespace Circustrein
 
 
                             //If the carnivore is smaller than the current herbivore animal
-                            else if (WagonMeatEater(w).Size < a.Size)
+                            else if (algoritme.WagonMeatEater(w).Size < a.Size)
                             {
                                 w.Animals.Add(a);
                                 w.FreePoints -= a.points;
@@ -96,14 +108,14 @@ namespace Circustrein
                             //If there is not a bigger carnivore
                             foreach (Animal a2 in w.Animals)
                             {
-                                if(a2.Size >= a.Size)
+                                if (a2.Size >= a.Size)
                                 {
                                     SmallestAnimal = false;
                                 }
                             }
 
                             //If there are no other meateaters in the wagon and the current animal is the smallest out of the ones in the wagon.
-                            if (!WagonHasMeatEater(w) && SmallestAnimal)
+                            if (!algoritme.WagonHasMeatEater(w) && SmallestAnimal)
                             {
                                 w.Animals.Add(a);
                                 w.FreePoints -= a.points;
@@ -149,64 +161,5 @@ namespace Circustrein
             return train;
         }
 
-
-        //Returns whether the Wagon contains a meateater
-        public bool WagonHasMeatEater(Wagon w)
-        {
-            if(w.Animals.Exists(a => a.Eater != AnimalType.Herbivore))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public Animal WagonMeatEater(Wagon w)
-        {
-            foreach (Animal a in w.Animals)
-            {
-                if(a.Eater == AnimalType.Carnivore)
-                {
-                    return a;
-                }
-            }
-            return null;
-        }
-
-        //Returns whether the Animal is the smallest out of the ones that are already in the wagon
-        public bool AnimalToAddIsSmallest(Wagon w, Animal a)
-        {
-            foreach (Animal a2 in w.Animals)
-            {
-                if(a2.Size <= a.Size)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        //Returns whether the wagon still has room
-        public bool WagonHasRoom(Wagon w, Animal a)
-        {
-            if (w.FreePoints >= a.points)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private void BAlgorithm_Click(object sender, EventArgs e)
-        {
-            Train t = PerformAlghoritm(animals);
-            for(int x = 0; x < t.wagons.Count(); x++)
-            {
-                var item = new ListViewItem(new[] { (x + 1).ToString() , t.wagons[x].Animals.Count().ToString(), (10 - t.wagons[x].FreePoints).ToString()});
-                TrainListView.Items.Add(item);
-            }
-            TrainListView.Visible = true;
-        }
     }
 }

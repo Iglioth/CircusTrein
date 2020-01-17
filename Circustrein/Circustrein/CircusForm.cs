@@ -108,7 +108,7 @@ namespace Circustrein
                             //If there is not a bigger carnivore
                             foreach (Animal a2 in w.Animals)
                             {
-                                if (a2.Size >= a.Size)
+                                if (a2.Size <= a.Size)
                                 {
                                     SmallestAnimal = false;
                                 }
